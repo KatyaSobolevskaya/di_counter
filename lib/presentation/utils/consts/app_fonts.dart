@@ -8,5 +8,4 @@ abstract class DiCounterFonts {
   static const double sizeMedium = 16;
   static const double sizeLarge = 19;
   static const double sizeExtraLarge = 55;
-
 }

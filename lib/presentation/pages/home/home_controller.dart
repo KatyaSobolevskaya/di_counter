@@ -1,8 +1,10 @@
+import 'package:di_counter/presentation/pages/home/home_tabs.dart';
 import 'package:get/get.dart';
 
 class HomeController extends GetxController {
-  Rx<int> currentTab = 0.obs;
+  Rx<HomeTabs> currentTab = HomeTabs.calculation.obs;
 
-  void onItemTapped(int index) {
-    currentTab.value = index;
-  }}
+  void onIconPressed(HomeTabs tab) {
+    currentTab.value = tab;
+  }
+}

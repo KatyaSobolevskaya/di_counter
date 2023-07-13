@@ -1,3 +1,4 @@
+import 'package:di_counter/presentation/app/localisation/languages.dart';
 import 'package:di_counter/presentation/app/navigation/routes.dart';
 import 'package:di_counter/presentation/pages/home/home_bindings.dart';
 import 'package:di_counter/presentation/pages/home/home_page.dart';
@@ -14,6 +15,9 @@ class DiCounterApp extends StatelessWidget {
     return ThemeProvider(
       theme: lightTheme,
       child: GetMaterialApp(
+        translations: Languages(),
+        locale: Get.deviceLocale,
+        fallbackLocale: const Locale('ru', 'RU'),
         initialRoute: Routes.home,
         getPages: _getPages,
       ),

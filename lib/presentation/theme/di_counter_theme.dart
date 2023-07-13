@@ -1,4 +1,4 @@
-import 'package:di_counter/presentation/utils/app_fonts.dart';
+import 'package:di_counter/presentation/utils/consts/app_fonts.dart';
 import 'package:equatable/equatable.dart';
 import 'package:flutter/material.dart';
 
