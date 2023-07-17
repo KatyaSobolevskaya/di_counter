@@ -9,7 +9,7 @@ enum HomeTabs {
 
 extension HomeTabsExt on HomeTabs {
   Widget get page => switch (this) {
-        HomeTabs.calculation => const CalculationPage(),
+        HomeTabs.calculation => CalculationPage(),
         HomeTabs.recipes => const RecipesPage(),
       };
 

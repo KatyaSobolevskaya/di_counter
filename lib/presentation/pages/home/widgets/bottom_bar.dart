@@ -26,8 +26,10 @@ class BottomBar extends StatelessWidget {
         ),
     ];
     return Container(
-      height: 57,
-      padding: const EdgeInsets.symmetric(horizontal: Dimensions.mainPadding),
+      height: Dimensions.averageHeight,
+      padding: const EdgeInsets.symmetric(
+        horizontal: Dimensions.averagePadding,
+      ),
       color: context.theme.secondaryBackgroundColor,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -52,7 +54,7 @@ class _IconButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return IconButton(
-      iconSize: 30,
+      iconSize: Dimensions.iconSize,
       onPressed: onPressed,
       icon: icon,
       color: iconColor,

@@ -1,5 +1,6 @@
 import 'package:di_counter/presentation/app/localisation/languages.dart';
 import 'package:di_counter/presentation/app/navigation/routes.dart';
+import 'package:di_counter/presentation/pages/calculation/calculation_page.dart';
 import 'package:di_counter/presentation/pages/home/home_bindings.dart';
 import 'package:di_counter/presentation/pages/home/home_page.dart';
 import 'package:di_counter/presentation/theme/di_counter_themes.dart';
@@ -29,6 +30,13 @@ List<GetPage> get _getPages => [
       GetPage(
         name: Routes.home,
         page: HomePage.new,
+        bindings: [
+          HomeBinding(),
+        ],
+      ),
+      GetPage(
+        name: Routes.calculation,
+        page: CalculationPage.new,
         bindings: [
           HomeBinding(),
         ],

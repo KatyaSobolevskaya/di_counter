@@ -12,17 +12,20 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Obx(() {
-      return Scaffold(
-        body: Column(
-          children: [
-            Expanded(
-              child: _controller.currentTab.value.page,
-            ),
-            BottomBar(
-              onIconPressed: _controller.onIconPressed,
-              currentTab: _controller.currentTab.value,
-            ),
-          ],
+      return SafeArea(
+        child: Scaffold(
+          resizeToAvoidBottomInset: false,
+          body: Column(
+            children: [
+              Expanded(
+                child: _controller.currentTab.value.page,
+              ),
+              BottomBar(
+                onIconPressed: _controller.onIconPressed,
+                currentTab: _controller.currentTab.value,
+              ),
+            ],
+          ),
         ),
       );
     });
