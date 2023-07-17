@@ -1,3 +1,4 @@
+import 'package:di_counter/presentation/pages/calculation/calculation_controller.dart';
 import 'package:di_counter/presentation/pages/home/home_controller.dart';
 import 'package:di_counter/presentation/pages/home/home_page.dart';
 import 'package:di_counter/presentation/pages/home/home_tabs.dart';
@@ -9,10 +10,12 @@ import 'package:get/get.dart';
 void main() {
   setUp(() {
     Get.put<HomeController>(HomeController());
+    Get.put<CalculationController>(CalculationController());
   });
 
   tearDown(() {
     Get.delete<HomeController>();
+    Get.delete<CalculationController>();
   });
 
   testWidgets('Changes tabs after tapping on the icons',
@@ -29,7 +32,7 @@ void main() {
     for (final tab in HomeTabs.values) {
       await tester.tap(find.byWidget(tab.icon));
       await tester.pumpAndSettle();
-      expect(find.byWidget(tab.page), findsOneWidget);
+      expect(find.byType(tab.page.runtimeType), findsOneWidget);
     }
   });
 }
