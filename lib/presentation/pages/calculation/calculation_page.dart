@@ -1,4 +1,4 @@
-import 'package:di_counter/domain/entities/dish.dart';
+import 'package:di_counter/domain/entities/product.dart';
 import 'package:di_counter/presentation/app/localisation/strings_consts.dart';
 import 'package:di_counter/presentation/pages/calculation/calculation_controller.dart';
 import 'package:di_counter/presentation/theme/di_counter_theme.dart';
@@ -41,18 +41,18 @@ class CalculationPage extends StatelessWidget {
                     children: [
                       _Weight(
                         title: StringsConsts.weightBefore.tr,
-                        value: _controller.weightBefore.value,
+                        value: _controller.dish.value.weightBefore,
                       ),
                       const SizedBox(width: Dimensions.averagePadding),
                       _Weight(
                         title: StringsConsts.weightAfter.tr,
-                        value: _controller.weightAfter.value,
+                        value: _controller.dish.value.weightAfter,
                       ),
                     ],
                   ),
                   const SizedBox(height: Dimensions.averagePadding),
                   _Table(
-                    products: _controller.products,
+                    products: _controller.dish.value.products,
                   ),
                   Row(
                     children: [
@@ -75,7 +75,7 @@ class CalculationPage extends StatelessWidget {
                 ],
               ),
             ),
-            _Result(result: _controller.result.value),
+            _Result(result: _controller.dish.value.calories),
           ],
         ),
       );
@@ -215,7 +215,7 @@ class _ProductItem extends StatelessWidget {
       height: Dimensions.averageHeight,
       child: Column(
         children: [
-          const DiCounterDivider(),
+          DiCounterDivider.secondary(context),
           Row(
             children: [
               Expanded(
@@ -230,9 +230,10 @@ class _ProductItem extends StatelessWidget {
                   ),
                 ),
               ),
-              const SizedBox(
-                  height: Dimensions.dividerHeight,
-                  child: DiCounterDivider(horizontal: false)),
+              SizedBox(
+                height: Dimensions.dividerHeight,
+                child: DiCounterDivider.secondary(context, horizontal: false),
+              ),
               SizedBox(
                 width: Dimensions.ceilWidth,
                 child: Padding(

@@ -4,22 +4,32 @@ import 'package:flutter/material.dart';
 
 class DiCounterDivider extends StatelessWidget {
   final bool horizontal;
+  final Color color;
 
-  const DiCounterDivider({
+  DiCounterDivider.secondary(
+    BuildContext context, {
     Key? key,
     this.horizontal = true,
-  }) : super(key: key);
+  })  : color = context.theme.tableDividerColor,
+        super(key: key);
+
+  DiCounterDivider.main(
+    BuildContext context, {
+    Key? key,
+    this.horizontal = true,
+  })  : color = context.theme.dividerColor,
+        super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return horizontal
         ? Divider(
-            color: context.theme.tableDividerColor,
+            color: color,
             thickness: Dimensions.dividerThickness,
             height: Dimensions.dividerThickness,
           )
         : VerticalDivider(
-            color: context.theme.tableDividerColor,
+            color: color,
             thickness: Dimensions.dividerThickness,
             width: Dimensions.dividerThickness,
           );

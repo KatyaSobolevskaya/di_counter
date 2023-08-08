@@ -12,6 +12,7 @@ class Languages extends Translations {
           StringsConsts.name: 'Название',
           StringsConsts.calories: 'кк',
           StringsConsts.grams: 'г',
+          StringsConsts.search: 'Поиск',
         },
       };
 }

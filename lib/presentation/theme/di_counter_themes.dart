@@ -8,15 +8,15 @@ const _lavenderBlue = Color(0xFFBDB0F1);
 const _blueMarguerite = Color(0xFF6754B1);
 const _blueGem = Color(0xFF4A3699);
 
-const lightTheme =DiCounterTheme(
-  primaryBackgroundColor:_beige,
-  secondaryBackgroundColor:_lavenderBlue,
-  primaryButtonColor:_lavenderBlue,
-  gradientButtonColor:_lavender,
-  primaryTextColor:_blueGem,
-  secondaryTextColor:_beige,
-  primaryIconColor:_blueMarguerite,
-  secondaryIconColor:_beige,
-  dividerColor:_beige,
-  tableDividerColor:_quartz,
+const lightTheme = DiCounterTheme(
+  primaryBackgroundColor: _beige,
+  secondaryBackgroundColor: _lavenderBlue,
+  primaryButtonColor: _lavenderBlue,
+  gradientButtonColor: _lavender,
+  primaryTextColor: _blueGem,
+  secondaryTextColor: _beige,
+  primaryIconColor: _blueMarguerite,
+  secondaryIconColor: _beige,
+  dividerColor: _beige,
+  tableDividerColor: _quartz,
 );

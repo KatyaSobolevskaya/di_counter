@@ -15,5 +15,5 @@ class Dimensions {
 
   static const iconSize = 30.0;
 
-  static const dividerThickness = 2.0;
+  static const dividerThickness = 1.0;
 }

@@ -1,11 +1,15 @@
 import 'package:di_counter/domain/entities/dish.dart';
+import 'package:di_counter/domain/entities/product.dart';
 import 'package:get/get.dart';
 
 class CalculationController extends GetxController {
-  Rx<int> result = 0.obs;
-  Rx<int> weightBefore = 0.obs;
-  Rx<int> weightAfter = 0.obs;
-  RxList<Product> products = <Product>[
-    Product(name: '', calories: 0),
-  ].obs;
+  Rx<Dish> dish = Dish(
+    products: [Product(id: 0, name: '', calories: 0)],
+    id: 0,
+    name: 'dish name',
+    calories: 0,
+    weightBefore: 0,
+    weightAfter: 0,
+    userId: 0,
+  ).obs;
 }
