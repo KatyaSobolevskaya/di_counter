@@ -13,6 +13,8 @@ class Languages extends Translations {
           StringsConsts.calories: 'кк',
           StringsConsts.grams: 'г',
           StringsConsts.search: 'Поиск',
+          StringsConsts.logIn: 'Войти',
+          StringsConsts.signUp: 'Зарегистрироваться',
         },
       };
 }

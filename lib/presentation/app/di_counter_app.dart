@@ -1,8 +1,9 @@
 import 'package:di_counter/presentation/app/localisation/languages.dart';
 import 'package:di_counter/presentation/app/navigation/routes.dart';
-import 'package:di_counter/presentation/pages/calculation/calculation_page.dart';
 import 'package:di_counter/presentation/pages/home/home_bindings.dart';
 import 'package:di_counter/presentation/pages/home/home_page.dart';
+import 'package:di_counter/presentation/pages/login_page/login_page.dart';
+import 'package:di_counter/presentation/pages/login_page/login_page_bindings.dart';
 import 'package:di_counter/presentation/theme/di_counter_themes.dart';
 import 'package:di_counter/presentation/theme/theme_provider.dart';
 import 'package:flutter/material.dart';
@@ -19,7 +20,7 @@ class DiCounterApp extends StatelessWidget {
         translations: Languages(),
         locale: Get.deviceLocale,
         fallbackLocale: const Locale('ru', 'RU'),
-        initialRoute: Routes.home,
+        initialRoute: Routes.login,
         getPages: _getPages,
       ),
     );
@@ -35,10 +36,10 @@ List<GetPage> get _getPages => [
         ],
       ),
       GetPage(
-        name: Routes.calculation,
-        page: CalculationPage.new,
+        name: Routes.login,
+        page: LoginPage.new,
         bindings: [
-          HomeBinding(),
+          LoginBinding(),
         ],
       ),
     ];

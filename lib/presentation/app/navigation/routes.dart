@@ -1,4 +1,4 @@
 abstract class Routes {
   static const String home = '/';
-  static const String calculation = '/calculation';
+  static const String login = '/login';
 }

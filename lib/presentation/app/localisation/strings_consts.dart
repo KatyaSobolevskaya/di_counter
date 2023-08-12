@@ -7,4 +7,6 @@ class StringsConsts {
   static const calories = 'calories';
   static const grams = 'grams';
   static const search = 'search';
+  static const logIn = 'logIn';
+  static const signUp = 'signUp';
 }
